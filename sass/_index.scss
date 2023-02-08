@@ -1,0 +1,66 @@
+/* CSS DE INDEX 0 A 500px */
+
+
+nav ul li {
+    list-style-type: none;
+}
+
+
+.colorNav {
+    background-color: $color;
+}
+
+
+
+nav {
+    grid-area: nav;
+}
+
+.portadaPrincipal {
+    grid-area: portadaPrincipal;
+
+    .imagenPrincipal {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.textoPrincipal {
+    grid-area: textoPrincipal;
+    background-color: $color;
+    text-align: center;
+
+    p {
+        padding: 20px;
+    }
+}
+
+.propagandaPrincipal {
+    grid-area: propagandaPrincipal;
+    background-color: pink;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0;
+
+    a {
+        text-decoration: none;
+        color: orangered;
+    }
+}
+
+footer {
+    grid-area: footer;
+    background-color: $color;
+}
+
+.grillaPrincipal {
+    background-color: $color;
+    display: grid;
+    gap: 15px;
+    grid-template-areas:
+        "nav"
+        "portadaPrincipal"
+        "textoPrincipal"
+        "propagandaPrincipal"
+        "footer";
+}

@@ -1,0 +1,68 @@
+/* CSS DISCOGRAFIA DE 0 A 500PX */
+.reseteoImagen {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 20px;
+    border-color: aliceblue;
+}
+
+.discoEstructura {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "imagen"
+        "lista"
+        "parrafo"
+        "footer";
+
+    h2 {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-area: titulo;
+        background-color: #FFDEAD;
+    }
+
+    .parrafoDisco {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+        grid-area: parrafo;
+        background-color: #FFDEAD;
+
+        p {
+            padding: 20px;
+        }
+    }
+
+    .listaDisco {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        grid-area: lista;
+        background-color: #FFDEAD;
+
+        ol {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: $color;
+            }
+        }
+    }
+
+    .imagenDisco {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-area: imagen;
+
+        background-color: #FFDEAD;
+    }
+}

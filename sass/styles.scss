@@ -1,0 +1,51 @@
+@import "variables_globales";
+@import "generales";
+@import "index";
+@import "discografia";
+@import "productos";
+@import "mas_info";
+
+/* PRIMER BREAK */
+
+@media (min-width: 500px) {
+    .discoEstructura {
+        display: grid;
+        grid-template-areas:
+            "titulo titulo"
+            "imagen lista"
+            "parrafo parrafo"
+            "footer footer";
+
+    }
+
+    .grillaProductos {
+        gap: 20px;
+        grid-template-areas:
+            "producto1 producto2"
+            "producto3 producto4"
+            "producto5 producto6"
+    }
+}
+
+@media(min-width:1024px) {
+    .grillaProductos {
+        gap: 20px;
+        grid-template-areas:
+            "producto1 producto2 producto3"
+            "producto4 producto5 producto6"
+    }
+
+    .caja:hover {
+        transform: scale(1.1);
+    }
+
+    .itemUno,
+    .itemDos,
+    .itemTres,
+    .itemCuatro,
+    .itemCinco,
+    .itemSeis {
+        transition-property: all;
+        transition-duration: 2;
+    }
+}

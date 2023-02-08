@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FFDEAD;
+  font-family: "PT Serif", serif;
+}
+
+/* CSS DE INDEX 0 A 500px */
+nav ul li {
+  list-style-type: none;
+}
+
+.colorNav {
+  background-color: orange;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.portadaPrincipal {
+  grid-area: portadaPrincipal;
+}
+.portadaPrincipal .imagenPrincipal {
+  width: 100%;
+  height: 100%;
+}
+
+.textoPrincipal {
+  grid-area: textoPrincipal;
+  background-color: orange;
+  text-align: center;
+}
+.textoPrincipal p {
+  padding: 20px;
+}
+
+.propagandaPrincipal {
+  grid-area: propagandaPrincipal;
+  background-color: pink;
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+.propagandaPrincipal a {
+  text-decoration: none;
+  color: orangered;
+}
+
+footer {
+  grid-area: footer;
+  background-color: orange;
+}
+
+.grillaPrincipal {
+  background-color: orange;
+  display: grid;
+  gap: 15px;
+  grid-template-areas: "nav" "portadaPrincipal" "textoPrincipal" "propagandaPrincipal" "footer";
+}
+
+/* CSS DISCOGRAFIA DE 0 A 500PX */
+.reseteoImagen {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: 20px;
+  border-color: aliceblue;
+}
+
+.discoEstructura {
+  display: grid;
+  grid-template-areas: "titulo" "imagen" "lista" "parrafo" "footer";
+}
+.discoEstructura h2 {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: titulo;
+  background-color: #FFDEAD;
+}
+.discoEstructura .parrafoDisco {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+  grid-area: parrafo;
+  background-color: #FFDEAD;
+}
+.discoEstructura .parrafoDisco p {
+  padding: 20px;
+}
+.discoEstructura .listaDisco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  grid-area: lista;
+  background-color: #FFDEAD;
+}
+.discoEstructura .listaDisco ol {
+  list-style-type: none;
+}
+.discoEstructura .listaDisco ol a {
+  text-decoration: none;
+  color: orange;
+}
+.discoEstructura .imagenDisco {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: imagen;
+  background-color: #FFDEAD;
+}
+
+/* CSS DE PRODUCTOS DE 0 A 500px */
+.itemUno {
+  grid-area: producto1;
+}
+
+.itemDos {
+  grid-area: producto2;
+}
+
+.itemTres {
+  grid-area: producto3;
+}
+
+.itemCuatro {
+  grid-area: producto4;
+}
+
+.itemCinco {
+  grid-area: producto5;
+}
+
+.itemSeis {
+  grid-area: producto6;
+}
+
+.grillaProductos {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-template-areas: "producto1" "producto2" "producto3" "producto4" "producto5" "producto6";
+}
+
+/* CSS MAS INFO 0 A 500px */
+.masInfo {
+  grid-area: direccion;
+}
+.masInfo .mapa {
+  grid-area: mapa;
+  grid-template-columns: 30%;
+  grid-template-rows: 70%;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-content: center;
+}
+.masInfo .grillaMasInfo {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  grid-template-areas: "direccion" "mapa";
+}
+.masInfo .mixin {
+  width: 100%;
+  height: 100%;
+}
+
+/* PRIMER BREAK */
+@media (min-width: 500px) {
+  .discoEstructura {
+    display: grid;
+    grid-template-areas: "titulo titulo" "imagen lista" "parrafo parrafo" "footer footer";
+  }
+  .grillaProductos {
+    gap: 20px;
+    grid-template-areas: "producto1 producto2" "producto3 producto4" "producto5 producto6";
+  }
+}
+@media (min-width: 1024px) {
+  .grillaProductos {
+    gap: 20px;
+    grid-template-areas: "producto1 producto2 producto3" "producto4 producto5 producto6";
+  }
+  .caja:hover {
+    transform: scale(1.1);
+  }
+  .itemUno,
+  .itemDos,
+  .itemTres,
+  .itemCuatro,
+  .itemCinco,
+  .itemSeis {
+    transition-property: all;
+    transition-duration: 2;
+  }
+}/*# sourceMappingURL=styles.css.map */

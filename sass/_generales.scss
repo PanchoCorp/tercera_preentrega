@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFDEAD;
+    font-family: 'PT Serif', serif;
+}
+
+@mixin mapas($width, $height) {
+    width: $width;
+   height: $height;
+}

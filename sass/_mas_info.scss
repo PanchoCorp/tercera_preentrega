@@ -1,0 +1,26 @@
+/* CSS MAS INFO 0 A 500px */
+.masInfo {
+    grid-area: direccion;
+
+    .mapa {
+        grid-area: mapa;
+        grid-template-columns: 30%;
+        grid-template-rows: 70%;
+        margin-bottom: 20px;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .grillaMasInfo {
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+        grid-template-areas:
+            "direccion"
+            "mapa";
+    }
+
+    .mixin {
+        @include mapas(100%, 100%)
+    }
+}
